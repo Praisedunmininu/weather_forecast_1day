@@ -5,7 +5,6 @@ load_dotenv()
 api_key = os.getenv("API_key")
 city = input("Enter a city:")
 url = "https://api.openweathermap.org/data/2.5/weather"
-api_key = "2af5dbc12ecd2a6ac040d34a668b2981"
 params = {
     "q": city,
     "appid": api_key,
@@ -38,4 +37,5 @@ if response.status_code == 200:
     else:
         print("It's warm!")
 else:
+
     print("Invalid city name or Request failed.")
